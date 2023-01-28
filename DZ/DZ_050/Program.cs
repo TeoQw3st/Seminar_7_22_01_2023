@@ -36,8 +36,8 @@ void ShowArray(int[,] array)
 }
 
 void FindNumberInArray (int [,] array, int n, int m){
-    if (n>=array.GetLength(0)||m>=array.GetLength(1)){
-        Console.WriteLine("Вы ввели неверный запрос, номер стоки или столбца должен быть меньше запрашиваемой");
+    if (n>array.GetLength(0)||m>array.GetLength(1)){
+        Console.WriteLine($"Вы ввели неверный запрос, номер строки не должен быть больше {array.GetLength(0)}, номер столбца не должен быть больше {array.GetLength(1)}");
     }
     else{
         Console.WriteLine($"По заданным координатам находится число {array[n-1,m-1]}");
