@@ -35,19 +35,22 @@ void ShowArray(int[,] array)
     }
 }
 
-void FindNumberInArray (int [,] array, int n, int m){
-    if (n>array.GetLength(0)||m>array.GetLength(1)){
+void FindNumberInArray(int[,] array, int n, int m)
+{
+    if (n > array.GetLength(0) || m > array.GetLength(1))
+    {
         Console.WriteLine($"Вы ввели неверный запрос, номер строки не должен быть больше {array.GetLength(0)}, номер столбца не должен быть больше {array.GetLength(1)}");
     }
-    else{
-        Console.WriteLine($"По заданным координатам находится число {array[n-1,m-1]}");
+    else
+    {
+        Console.WriteLine($"По заданным координатам находится число {array[n - 1, m - 1]}");
     }
 }
 
-int [,] matr = CreateRandomArray(5,8,0,10);
+int[,] matr = CreateRandomArray(5, 8, 0, 10);
 ShowArray(matr);
 Console.WriteLine("Введите номер строки в которой вы хотите найти число ");
 int line1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите номер столбца в которой вы хотите найти число ");
 int column1 = Convert.ToInt32(Console.ReadLine());
-FindNumberInArray(matr,line1,column1);
+FindNumberInArray(matr, line1, column1);
